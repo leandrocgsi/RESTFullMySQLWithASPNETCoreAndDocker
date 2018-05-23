@@ -3,7 +3,7 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>7cd1ad73-ae37-4619-9e04-895b2493dfaa</ProjectGuid>
+    <ProjectGuid>3c5af09b-a82e-4822-97a6-5f934ed81771</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/api/values</DockerServiceUrl>
     <DockerServiceName>restfullmysqlwithaspnetcoreanddocker</DockerServiceName>
