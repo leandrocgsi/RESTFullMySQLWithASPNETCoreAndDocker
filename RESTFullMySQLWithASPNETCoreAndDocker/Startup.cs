@@ -1,40 +1,64 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Threading;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
+using MySql.Data.MySqlClient;
+using RESTFullMySQLWithASPNETCoreAndDocker.Models;
 
 namespace RESTFullMySQLWithASPNETCoreAndDocker
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private readonly IConfiguration _config;
+
+        private readonly string _connectionString;
+
+        public Startup(IConfiguration config)
         {
-            Configuration = configuration;
+            _config = config;
+            _connectionString = $@"Server={_config["MYSQL_SERVER_NAME"]}; Database={_config["MYSQL_DATABASE"]}; Uid={_config["MYSQL_USER"]}; Pwd={_config["MYSQL_PASSWORD"]}";
         }
 
-        public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            WaitForDBInit(_connectionString);
+            services.AddDbContext<StudentContext>(ops => ops.UseMySql(_connectionString));
             services.AddMvc();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, StudentContext context)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            context.Database.Migrate();
             app.UseMvc();
+        }
+
+        // Try to connect to the db with exponential backoff on fail.
+        private static void WaitForDBInit(string connectionString)
+        {
+            var connection = new MySqlConnection(connectionString);
+            int retries = 1;
+            while (retries < 7)
+            {
+                try
+                {
+                    Console.WriteLine("Connecting to db. Trial: {0}", retries);
+                    connection.Open();
+                    connection.Close();
+                    break;
+                }
+                catch (MySqlException)
+                {
+                    Thread.Sleep((int)Math.Pow(2, retries) * 1000);
+                    retries++;
+                }
+            }
         }
     }
 }
