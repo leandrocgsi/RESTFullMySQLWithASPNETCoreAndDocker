@@ -5,4 +5,4 @@ services:
     image: ${DOCKER_REGISTRY}restfullmysqlwithaspnetcoreanddocker
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: ../RESTFullMySQLWithASPNETCoreAndDocker/Dockerfile
