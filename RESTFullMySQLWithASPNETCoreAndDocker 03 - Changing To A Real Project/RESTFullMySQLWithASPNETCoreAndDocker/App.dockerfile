@@ -7,4 +7,4 @@ ARG URL_PORT
 WORKDIR /app
 ENV NUGET_XMLDOC_MODE skip
 ENV ASPNETCORE_URLS http://*:${URL_PORT}
-ENTRYPOINT [ "dotnet", "ContainerProd.dll" ]
+ENTRYPOINT [ "dotnet", "RESTFullMySQLWithASPNETCoreAndDocker.dll" ]

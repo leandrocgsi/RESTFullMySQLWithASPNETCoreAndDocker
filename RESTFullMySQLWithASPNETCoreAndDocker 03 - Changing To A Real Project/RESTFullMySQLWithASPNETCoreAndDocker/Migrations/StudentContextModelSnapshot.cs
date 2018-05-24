@@ -15,7 +15,7 @@ namespace RESTFullMySQLWithASPNETCoreAndDocker.Migrations
                 .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
                 .HasAnnotation("ProductVersion", "2.0.0-rtm-26452");
 
-            modelBuilder.Entity("ContainerProd.Models.Department", b =>
+            modelBuilder.Entity("RESTFullMySQLWithASPNETCoreAndDocker.Models.Department", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
@@ -29,7 +29,7 @@ namespace RESTFullMySQLWithASPNETCoreAndDocker.Migrations
                     b.ToTable("Departments");
                 });
 
-            modelBuilder.Entity("ContainerProd.Models.Student", b =>
+            modelBuilder.Entity("RESTFullMySQLWithASPNETCoreAndDocker.Models.Student", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
@@ -53,9 +53,9 @@ namespace RESTFullMySQLWithASPNETCoreAndDocker.Migrations
                     b.ToTable("Students");
                 });
 
-            modelBuilder.Entity("ContainerProd.Models.Student", b =>
+            modelBuilder.Entity("RESTFullMySQLWithASPNETCoreAndDocker.Models.Student", b =>
                 {
-                    b.HasOne("ContainerProd.Models.Department", "Department")
+                    b.HasOne("RESTFullMySQLWithASPNETCoreAndDocker.Models.Department", "Department")
                         .WithMany("Students")
                         .HasForeignKey("DepartmentID")
                         .OnDelete(DeleteBehavior.Cascade);
