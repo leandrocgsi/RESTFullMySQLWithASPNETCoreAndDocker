@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  mica.presentation.web:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionString=server=mica.data.mysql;userid=root;password=Test@1234;database=Mica
+    ports:
+      - "5555:80"
+
+  mica.data.mysql:
+    environment:
+      MYSQL_ROOT_PASSWORD: "Test@1234"
+    ports:
+      - "3307:3306"

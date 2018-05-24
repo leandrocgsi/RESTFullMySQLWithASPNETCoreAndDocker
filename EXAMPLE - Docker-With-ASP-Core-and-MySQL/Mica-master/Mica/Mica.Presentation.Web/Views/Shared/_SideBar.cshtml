@@ -1,0 +1,86 @@
+﻿<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+    <ul class="nav menu">
+        <li>
+            <a asp-controller="Home" asp-action="Index">
+                <svg class="glyph stroked line-graph">
+                    <use xlink:href="#stroked-line-graph"></use>
+                </svg>
+                Dashboard
+            </a>
+        </li>
+        <li role="presentation" class="divider"></li>
+
+        <li class="parent">
+            <a asp-area="" asp-controller="Ticket" asp-action="Index">
+                <svg class="glyph stroked notepad "><use xlink:href="#stroked-notepad" /></svg>
+                Quản lý lệnh sản xuất
+            </a>
+            <ul class="children collapse  in" id="sub-item-ticket">
+                <li>
+                    <a asp-area="" asp-controller="Ticket" asp-action="AddEditView">
+                        <i class="glyph glyphicon glyphicon-chevron-down"></i>
+                        Tạo lệnh sản xuất
+                    </a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="TicketStatus" asp-action="Index">
+                        <i class="glyph glyphicon glyphicon-chevron-down"></i>
+                        Quản lý trạng thái lệnh
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li role="presentation" class="divider"></li>
+
+        <li class="parent">
+            <a asp-area="" asp-controller="Inventory" asp-action="Index">
+                <span data-toggle="collapse" href="#sub-item-inventory">
+                    <i class="glyph glyphicon glyphicon-barcode"></i>
+                </span>
+                Quản lý kho
+            </a>
+            <ul class="children collapse  in" id="sub-item-inventory">
+                <li>
+                    <a asp-area="" asp-controller="InventoryOperation" asp-action="Index">
+                        <i class="glyph glyphicon glyphicon-chevron-down"></i>
+                        Quản lý xuất/nhập kho
+                    </a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Material" asp-action="Index">
+                        <i class="glyph glyphicon glyphicon-chevron-down"></i>
+                        Quản lý vật tư
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li role="presentation" class="divider"></li>
+
+        <li class="parent">
+            <a asp-area="" asp-controller="Effort" asp-action="Index">
+                <i class="glyph glyphicon glyphicon-time"></i>
+                Quản lý công
+            </a>
+            <ul class="children collapse  in" id="sub-item-inventory">
+                <li>
+                    <a asp-area="" asp-controller="EffortOperation" asp-action="Index">
+                        <i class="glyph glyphicon glyphicon-chevron-down"></i>
+                        Danh sách công
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li role="presentation" class="divider"></li>
+
+        <li>
+            <a asp-area="" asp-controller="Client" asp-action="Index">
+                <svg class="glyph stroked male user "><use xlink:href="#stroked-male-user" /></svg>
+                Quản lý khách hàng
+            </a>
+        </li>
+        
+        @*<li role="presentation" class="divider"></li>
+        <li><a href="login.html"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Login Page</a></li>*@
+    </ul>
+    <div class="attribution"><p>&copy; 2017 - Mica</p></div>
+</div><!--/.sidebar-->

@@ -1,0 +1,50 @@
+﻿// Configure bundling and minification for the project.
+// More info at https://go.microsoft.com/fwlink/?LinkId=808241
+[
+  {
+    "outputFileName": "wwwroot/css/site.min.css",
+    // An array of relative input file paths. Globbing patterns supported
+    "inputFiles": [
+      "wwwroot/css/styles.css",
+      "wwwroot/css/site.css",
+      "wwwroot/css/control.css",
+      "wwwroot/css/form.css",
+      "wwwroot/css/modal.css",
+      "wwwroot/css/table.css",
+      "wwwroot/css/inventory/*.css",
+      "wwwroot/css/effort/*.css",
+      "wwwroot/css/client/*.css",
+      "wwwroot/css/ticket/*.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site.min.js",
+    "inputFiles": [
+      "wwwroot/js/lumino.glyphs.js",
+      "wwwroot/js/jquery.plugins/*.js",
+
+      "wwwroot/js/framework/aa.js",
+      "wwwroot/js/bootstrap.js",
+
+      "wwwroot/js/app/utils/*.js",
+
+      "wwwroot/js/app/common/*.js",
+      "wwwroot/js/app/shared/*.js",
+
+      "wwwroot/js/app/ticket/mica.ticket.create-ticket.effort-op.js",
+      "wwwroot/js/app/ticket/mica.ticket.create-ticket.inventory-op.js",
+      "wwwroot/js/app/ticket/mica.ticket.create-ticket.form.js",
+      "wwwroot/js/app/ticket/mica.ticket.addedit.js",
+      "wwwroot/js/app/ticket/*.js",
+
+      "wwwroot/js/app/app.js"
+    ],
+    // Optionally specify minification options
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    },
+    // Optionally generate .map file
+    "sourceMap": true
+  }
+]

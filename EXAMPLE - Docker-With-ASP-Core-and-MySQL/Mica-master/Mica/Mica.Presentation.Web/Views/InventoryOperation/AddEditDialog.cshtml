@@ -1,0 +1,61 @@
+﻿@model InventoryOperationAddEditViewModel
+
+@{
+    ViewData["Title"] = "Tạo lệnh xuất/nhập kho";
+}
+
+<div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h2>@ViewData["Title"].</h2>
+    </div>
+    <div class="modal-body">
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <form id="form" class="form-horizontal">
+            <div class="form-group">
+                <label asp-for="Model.MaterialId" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    @Html.DropDownListFor(vm => vm.Model.MaterialId, Model.Materials, null, new {@class="form-control"})
+                    <span asp-validation-for="Model.MaterialId" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Model.Quantity" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input type="number" asp-for="Model.Quantity" required min="-999999" max="999999" class="form-control" />
+                    <span asp-validation-for="Model.Quantity" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Model.OperationDate" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input data-provide="datepicker" maxlength="255" class="form-control datepicker" type="datetime" 
+                           data-val="true"
+                           id="Model_OperationDate" name="Model.OperationDate" 
+                           value="@string.Format("{0:d}", TimeZoneInfo.ConvertTime(Model.Model.OperationDate, TimeZoneInfo.Local))">
+                    <span asp-validation-for="Model.OperationDate" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Model.Note" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <textarea asp-for="Model.Note" maxlength="1000" class="form-control"></textarea>
+                    <span asp-validation-for="Model.Note" class="text-danger"></span>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary js-save-btn"
+                mc-modal-post-url="/InventoryOperation/Save/">
+            <i class="glyphicon glyphicon-floppy-disk"></i>
+            Lưu
+        </button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">
+            <i class="glyphicon glyphicon-remove"></i>
+            Hủy
+        </button>
+    </div>
+</div>

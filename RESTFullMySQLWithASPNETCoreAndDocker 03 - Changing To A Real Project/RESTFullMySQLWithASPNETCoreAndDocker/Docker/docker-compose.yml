@@ -1,19 +1,11 @@
 version: '3.4'
-
-#services:
-#  restfullmysqlwithaspnetcoreanddocker:
-#    image: ${DOCKER_REGISTRY}restfullmysqlwithaspnetcoreanddocker
-#    build:
-#      context: .
-#      dockerfile: ../RESTFullMySQLWithASPNETCoreAndDocker/Dockerfile
-
 services:
   webapp:
     container_name: webapp.test
     image: webapp:${WEBAPP_VERSION}
     build:
-      context: ../
-      dockerfile: ./RESTFullMySQLWithASPNETCoreAndDocker/App.dockerfile
+      context: ./
+      dockerfile: ./App.dockerfile
       args:
         WEBAPP_VERSION: ${WEBAPP_VERSION}
         URL_PORT: ${URL_PORT}
@@ -34,8 +26,8 @@ services:
     container_name: builder
     image: webapp:${BUILDER_VERSION}.${BUILD_CONFIG}
     build:
-      context: ../
-      dockerfile: ./RESTFullMySQLWithASPNETCoreAndDocker/Build.dockerfile
+      context: ./
+      dockerfile: ./Build.dockerfile
       args:
         BUILDER_VERSION: ${BUILDER_VERSION}
         BUILD_CONFIG: ${BUILD_CONFIG}

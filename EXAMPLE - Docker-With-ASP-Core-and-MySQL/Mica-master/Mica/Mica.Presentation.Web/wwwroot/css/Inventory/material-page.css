@@ -1,0 +1,25 @@
+﻿.create-new--btn {
+    margin-bottom: 1em;
+}
+
+.table.material-detail th:nth-child(2) {
+    width: 8em;
+}
+.table.material-detail th:nth-child(3) {
+    width: 15em;
+}
+
+.table.material-detail th:nth-child(5) {
+    width: 8em;
+}
+
+.table.material-detail th:nth-child(6), .table.material-detail td:nth-child(6) {
+    width: 8em;
+    text-align: right;
+}
+
+.table.material-detail th:nth-child(7), .table.material-detail td:nth-child(7) {
+    width: 8em;
+    text-align: center;
+}
+

@@ -1,0 +1,76 @@
+version: '3.4'
+
+services:
+  onlinestorewebapp:
+    image: onlinestorewebapp
+    container_name: OnlineStoreWebApp
+    ports:
+          - 3000:80
+    build:
+      context: ./OnlineStoreWebApp
+      dockerfile: Dockerfile
+    depends_on:
+      - onlinestorewebapi
+
+  onlinestorewebapi:
+    image: onlinestorewebapi
+    container_name: OnlineStoreWebApi
+    environment:
+      - ONLINE_STORE_DB_USERNAME=root
+      - ONLINE_STORE_DB_PASSWORD=password
+      - ONLINE_STORE_DB_SERVER=OnlineStoreDb
+      - ONLINE_STORE_MQ_USERNAME=store
+      - ONLINE_STORE_MQ_PASSWORD=password
+      - ONLINE_STORE_MQ_SERVER=OnlineStoreMQ
+    ports:
+          - 3001:80
+    build:
+      context: ./OnlineStoreWebApi
+      dockerfile: Dockerfile
+    depends_on:
+      - rabbitmq
+      - mysql
+
+  onlinestoreworker:
+    image: onlinestoreworker
+    container_name: OnlineStoreWorker
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Container
+      - ONLINE_STORE_DB_USERNAME=root
+      - ONLINE_STORE_DB_PASSWORD=password
+      - ONLINE_STORE_DB_SERVER=OnlineStoreDb
+      - ONLINE_STORE_MQ_USERNAME=store
+      - ONLINE_STORE_MQ_PASSWORD=password
+      - ONLINE_STORE_MQ_SERVER=OnlineStoreMQ
+    build:
+      context: ./OnlineStoreWorker
+      dockerfile: Dockerfile
+    depends_on:
+      - rabbitmq
+      - mysql
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: OnlineStoreMQ
+    hostname: OnlineStoreMQ
+    ports:
+        - 15672:15672
+        - 5671:5671
+        - 5672:5672
+    volumes:
+        - ~/rabbitmq:/var/lib/rabbitmq 
+    environment:
+        - RABBITMQ_DEFAULT_USER=store
+        - RABBITMQ_DEFAULT_PASS=password
+  
+  mysql:
+    image: mysql
+    container_name: OnlineStoreDb
+    ports:
+        - 3306:3306
+    volumes:
+        - ~/mysql:/var/lib/mysql
+        - .:/home
+    command: --init-file /home/initscript.sql
+    environment:
+        - MYSQL_ROOT_PASSWORD=password

@@ -1,0 +1,33 @@
+version: '3.4'
+
+services:
+  mysql:
+     image: mysql
+     restart: always
+     ports:
+       - 3306:3306
+     environment:
+         MYSQL_ROOT_PASSWORD: password
+     volumes:
+       - ~/mysql:/var/lib/mysql
+       - .:/home
+     #command: --init-file /home/initscript.sql
+     networks:
+       - mynetwork
+
+  restfullmysqlwithaspnetcoreanddocker:
+     image: restfullmysqlwithaspnetcoreanddocker
+     ports:
+       - 3001:80
+     build:
+       context: .
+       dockerfile: RESTFullMySQLWithASPNETCoreAndDocker/Dockerfile
+     links:
+       - mysql
+     depends_on:
+       - "mysql"
+     networks:
+       - mynetwork
+networks:
+  mynetwork:
+     driver: bridge
