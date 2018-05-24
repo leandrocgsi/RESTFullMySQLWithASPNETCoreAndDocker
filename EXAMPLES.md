@@ -5,3 +5,12 @@
 [ASP.NET Core PostgreSQL VS2017 Docker](https://github.com/damienbod/AspNetCorePostgreSQLDocker)
 
 [Docker Architecture](https://www.infopulse.com/files/images/creating-asp-net-core-angular-4-application-pic-23.png)
+[Adding MySQL to ASP.NET Core App With Docker Compose](https://code-maze.com/mysql-aspnetcore-docker-compose/)
+[How to Prepare an ASP.NET Core Application for Dockerization](https://code-maze.com/how-to-prepare-aspnetcore-app-dockerization/)
+
+
+https://medium.com/@renato.groffe/asp-net-core-2-0-crud-em-api-utilizando-jwt-ef-core-inmemory-e-docker-4fff85f9a365
+
+https://code-maze.com/mysql-aspnetcore-docker-compose/
+
+mysql asp.net core 2.0 docker
