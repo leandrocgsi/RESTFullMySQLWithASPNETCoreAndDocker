@@ -1,0 +1,10 @@
+src/AspNetCoreVS2017Docker/AspNetCoreVS2017Docker.csproj.user
+src/AspNetCoreVS2017Docker/bin
+src/AspNetCoreVS2017Docker/obj
+.vs/AspNetCoreVS2017Docker/v15/.suo
+.vs
+src/AspNetCorePostgreSQLDocker/bin
+src/AspNetCorePostgreSQLDocker/obj
+src/AspNetCorePostgreSQLDocker/AspNetCorePostgreSQLDocker.csproj.user
+obj
+obj/Docker/HashOfDockerArtifacts.Fast.cache
