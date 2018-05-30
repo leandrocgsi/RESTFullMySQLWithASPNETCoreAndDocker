@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  restfullmysqlwithaspnetcoreanddocker:
+    image: restfullmysqlwithaspnetcoreanddocker
+    build:
+      context: .
+      dockerfile: RESTFullMySQLWithASPNETCoreAndDocker/Dockerfile
