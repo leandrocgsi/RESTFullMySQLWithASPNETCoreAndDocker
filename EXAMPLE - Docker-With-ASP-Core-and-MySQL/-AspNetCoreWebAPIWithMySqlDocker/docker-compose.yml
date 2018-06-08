@@ -1,0 +1,32 @@
+version: '2'
+
+services:
+    mysqlserver:
+        image: conferenceapp-mysql
+        restart: always
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - 3306:3306
+        environment:
+            MYSQL_ROOT_PASSWORD: password
+        networks:
+            - mynetwork
+    aspnetcoreserver: 
+        image: conferenceapp-webapi
+        ports:
+            - 5000:5000
+        build:
+            context: ./ConferenceApp.WebAPI
+            dockerfile: Dockerfile
+        links:
+            - mysqlserver
+        depends_on:
+            - mysqlserver
+        networks:
+            - mynetwork
+            
+networks:
+    mynetwork:
+        driver: bridge

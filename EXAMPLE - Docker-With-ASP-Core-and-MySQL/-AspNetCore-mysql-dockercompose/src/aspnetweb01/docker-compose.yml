@@ -1,0 +1,23 @@
+version: '2'
+services:
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: P2ssw0rd
+      MYSQL_DATABASE: ef
+      MYSQL_USER: ef
+      MYSQL_PASSWORD: P2ssw0rd
+
+  web:
+    build: .
+    depends_on:
+      - db
+    links:
+      - db
+    ports:
+      - "5000:5000"
+    restart: always
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+    

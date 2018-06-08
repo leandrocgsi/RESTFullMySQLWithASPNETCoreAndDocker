@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26206.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConferenceApp.WebAPI", "ConferenceApp.WebAPI\ConferenceApp.WebAPI.csproj", "{DF9FA301-C2E8-4DA1-8758-4E45B3D00DEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF9FA301-C2E8-4DA1-8758-4E45B3D00DEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF9FA301-C2E8-4DA1-8758-4E45B3D00DEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF9FA301-C2E8-4DA1-8758-4E45B3D00DEA}.Debug|x64.ActiveCfg = Debug|x64
+		{DF9FA301-C2E8-4DA1-8758-4E45B3D00DEA}.Debug|x64.Build.0 = Debug|x64
+		{DF9FA301-C2E8-4DA1-8758-4E45B3D00DEA}.Debug|x86.ActiveCfg = Debug|x86
+		{DF9FA301-C2E8-4DA1-8758-4E45B3D00DEA}.Debug|x86.Build.0 = Debug|x86
+		{DF9FA301-C2E8-4DA1-8758-4E45B3D00DEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF9FA301-C2E8-4DA1-8758-4E45B3D00DEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF9FA301-C2E8-4DA1-8758-4E45B3D00DEA}.Release|x64.ActiveCfg = Release|x64
+		{DF9FA301-C2E8-4DA1-8758-4E45B3D00DEA}.Release|x64.Build.0 = Release|x64
+		{DF9FA301-C2E8-4DA1-8758-4E45B3D00DEA}.Release|x86.ActiveCfg = Release|x86
+		{DF9FA301-C2E8-4DA1-8758-4E45B3D00DEA}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
