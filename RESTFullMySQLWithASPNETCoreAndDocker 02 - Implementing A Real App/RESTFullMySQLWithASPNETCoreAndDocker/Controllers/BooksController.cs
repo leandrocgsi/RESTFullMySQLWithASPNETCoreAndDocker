@@ -1,12 +1,12 @@
 ﻿using Tapioca.HATEOAS;
 using Microsoft.AspNetCore.Mvc;
-using RestWithASPNETUdemy.Business;
-using RestWithASPNETUdemy.Data.VO;
+using RESTFullMySQLWithASPNETCoreAndDocker.Business;
+using RESTFullMySQLWithASPNETCoreAndDocker.Data.VO;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Authorization;
 
-namespace RestWithASPNETUdemy.Controllers
+namespace RESTFullMySQLWithASPNETCoreAndDocker.Controllers
 {
 
     /* Mapeia as requisições de http://localhost:{porta}/api/books/v1/

@@ -1,8 +1,8 @@
-﻿using RestWithASPNETUdemy.Data.VO;
+﻿using RESTFullMySQLWithASPNETCoreAndDocker.Data.VO;
 using System.Collections.Generic;
 using Tapioca.HATEOAS.Utils;
 
-namespace RestWithASPNETUdemy.Business
+namespace RESTFullMySQLWithASPNETCoreAndDocker.Business
 {
     public interface IPersonBusiness
     {

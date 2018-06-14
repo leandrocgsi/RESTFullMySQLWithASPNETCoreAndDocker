@@ -1,7 +1,7 @@
-﻿using RestWithASPNETUdemy.Data.VO;
+﻿using RESTFullMySQLWithASPNETCoreAndDocker.Data.VO;
 using System.Collections.Generic;
 
-namespace RestWithASPNETUdemy.Business
+namespace RESTFullMySQLWithASPNETCoreAndDocker.Business
 {
     public interface IBookBusiness
     {

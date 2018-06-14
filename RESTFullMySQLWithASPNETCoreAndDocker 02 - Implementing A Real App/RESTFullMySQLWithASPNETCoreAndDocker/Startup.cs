@@ -10,22 +10,22 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Net.Http.Headers;
 
-using RestWithASPNETUdemy.Model.Context;
-using RestWithASPNETUdemy.Business;
-using RestWithASPNETUdemy.Business.Implementattions;
-using RestWithASPNETUdemy.Repository.Generic;
+using RESTFullMySQLWithASPNETCoreAndDocker.Model.Context;
+using RESTFullMySQLWithASPNETCoreAndDocker.Business;
+using RESTFullMySQLWithASPNETCoreAndDocker.Business.Implementattions;
+using RESTFullMySQLWithASPNETCoreAndDocker.Repository.Generic;
 
-using RestWithASPNETUdemy.HyperMedia;
+using RESTFullMySQLWithASPNETCoreAndDocker.HyperMedia;
 using Swashbuckle.AspNetCore.Swagger;
 
 using Tapioca.HATEOAS;
-using RestWithASPNETUdemy.Security.Configuration;
+using RESTFullMySQLWithASPNETCoreAndDocker.Security.Configuration;
 using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using System.IO;
 
-namespace RestWithASPNETUdemy
+namespace RESTFullMySQLWithASPNETCoreAndDocker
 {
     public class Startup
     {

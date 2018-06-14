@@ -1,9 +1,9 @@
 ﻿using Tapioca.HATEOAS;
 using Microsoft.AspNetCore.Mvc;
-using RestWithASPNETUdemy.Data.VO;
+using RESTFullMySQLWithASPNETCoreAndDocker.Data.VO;
 using System.Threading.Tasks;
 
-namespace RestWithASPNETUdemy.HyperMedia
+namespace RESTFullMySQLWithASPNETCoreAndDocker.HyperMedia
 {
     public class PersonEnricher : ObjectContentResponseEnricher<PersonVO>
     {

@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using RestWithASPNETUdemy.Model;
-using RestWithASPNETUdemy.Repository.Generic;
-using RestWithASPNETUdemy.Data.Converters;
-using RestWithASPNETUdemy.Data.VO;
+using RESTFullMySQLWithASPNETCoreAndDocker.Model;
+using RESTFullMySQLWithASPNETCoreAndDocker.Repository.Generic;
+using RESTFullMySQLWithASPNETCoreAndDocker.Data.Converters;
+using RESTFullMySQLWithASPNETCoreAndDocker.Data.VO;
 using Tapioca.HATEOAS.Utils;
 
-namespace RestWithASPNETUdemy.Business.Implementattions
+namespace RESTFullMySQLWithASPNETCoreAndDocker.Business.Implementattions
 {
     public class PersonBusinessImpl : IPersonBusiness
     {

@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using RestWithASPNETUdemy.Business;
+using RESTFullMySQLWithASPNETCoreAndDocker.Business;
 using Microsoft.AspNetCore.Authorization;
-using RestWithASPNETUdemy.Model;
+using RESTFullMySQLWithASPNETCoreAndDocker.Model;
 using System;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace RestWithASPNETUdemy.Controllers
+namespace RESTFullMySQLWithASPNETCoreAndDocker.Controllers
 {
     [ApiVersion("1")]
     [Route("api/[controller]/v{version:apiVersion}")]

@@ -1,10 +1,10 @@
-﻿using RestWithASPNETUdemy.Model;
-using RestWithASPNETUdemy.Model.Context;
-using RestWithASPNETUdemy.Repository.Generic;
+﻿using RESTFullMySQLWithASPNETCoreAndDocker.Model;
+using RESTFullMySQLWithASPNETCoreAndDocker.Model.Context;
+using RESTFullMySQLWithASPNETCoreAndDocker.Repository.Generic;
 using System.Linq;
 using System.Collections.Generic;
 
-namespace RestWithASPNETUdemy.Business.Implementattions
+namespace RESTFullMySQLWithASPNETCoreAndDocker.Business.Implementattions
 {
     public class PersonRepositoryImpl : GenericRepository<Person>, IPersonRepository
     {

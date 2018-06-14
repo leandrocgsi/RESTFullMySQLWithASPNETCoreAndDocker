@@ -1,7 +1,7 @@
 ﻿using System.Runtime.Serialization;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace RestWithASPNETUdemy.Model
+namespace RESTFullMySQLWithASPNETCoreAndDocker.Model
 {
 	[Table("users")]
     public class User

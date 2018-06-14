@@ -1,8 +1,8 @@
-﻿using RestWithASPNETUdemy.Model.Base;
+﻿using RESTFullMySQLWithASPNETCoreAndDocker.Model.Base;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace RestWithASPNETUdemy.Model
+namespace RESTFullMySQLWithASPNETCoreAndDocker.Model
 {
     [Table("books")]
     public class Book : BaseEntity

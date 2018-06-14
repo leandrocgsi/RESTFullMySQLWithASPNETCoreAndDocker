@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace RestWithASPNETUdemy.Data.VO
+namespace RESTFullMySQLWithASPNETCoreAndDocker.Data.VO
 {
     public class BookVO : ISupportsHyperMedia
     {

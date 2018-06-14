@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace RestWithASPNETUdemy.Data.Converter
+namespace RESTFullMySQLWithASPNETCoreAndDocker.Data.Converter
 {
     public interface IParser<O, D>
     {

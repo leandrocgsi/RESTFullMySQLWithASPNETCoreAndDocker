@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.Serialization;
 
-namespace RestWithASPNETUdemy.Model.Base
+namespace RESTFullMySQLWithASPNETCoreAndDocker.Model.Base
 {
     // Contrato entre atributos
     // e a estrutura da tabela

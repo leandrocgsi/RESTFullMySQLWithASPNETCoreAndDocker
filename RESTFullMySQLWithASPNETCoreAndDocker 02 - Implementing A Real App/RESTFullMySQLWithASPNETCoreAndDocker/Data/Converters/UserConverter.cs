@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using RestWithASPNETUdemy.Data.Converter;
-using RestWithASPNETUdemy.Model;
+using RESTFullMySQLWithASPNETCoreAndDocker.Data.Converter;
+using RESTFullMySQLWithASPNETCoreAndDocker.Model;
 using System.Linq;
 
-namespace RestWithASPNETUdemy.Data.Converters
+namespace RESTFullMySQLWithASPNETCoreAndDocker.Data.Converters
 {
     public class UserConverter : IParser<UserVO, User>, IParser<User, UserVO>
     {

@@ -1,4 +1,4 @@
-﻿namespace RestWithASPNETUdemy.Security.Configuration
+﻿namespace RESTFullMySQLWithASPNETCoreAndDocker.Security.Configuration
 {
     public class TokenConfiguration
     {

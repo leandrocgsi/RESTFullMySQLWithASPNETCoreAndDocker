@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using RestWithASPNETUdemy.Data.Converter;
-using RestWithASPNETUdemy.Model;
+using RESTFullMySQLWithASPNETCoreAndDocker.Data.Converter;
+using RESTFullMySQLWithASPNETCoreAndDocker.Model;
 using System.Linq;
-using RestWithASPNETUdemy.Data.VO;
+using RESTFullMySQLWithASPNETCoreAndDocker.Data.VO;
 
-namespace RestWithASPNETUdemy.Data.Converters
+namespace RESTFullMySQLWithASPNETCoreAndDocker.Data.Converters
 {
     public class BookConverter : IParser<BookVO, Book>, IParser<Book, BookVO>
     {

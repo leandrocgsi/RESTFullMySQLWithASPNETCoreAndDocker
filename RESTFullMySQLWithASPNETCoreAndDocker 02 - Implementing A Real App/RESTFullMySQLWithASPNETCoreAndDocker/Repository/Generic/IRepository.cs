@@ -1,7 +1,7 @@
-﻿using RestWithASPNETUdemy.Model.Base;
+﻿using RESTFullMySQLWithASPNETCoreAndDocker.Model.Base;
 using System.Collections.Generic;
 
-namespace RestWithASPNETUdemy.Repository.Generic
+namespace RESTFullMySQLWithASPNETCoreAndDocker.Repository.Generic
 {
     public interface IRepository<T> where T : BaseEntity
     {

@@ -6,12 +6,9 @@
     <ProjectGuid>500ca0b4-cbfc-4bfd-bf61-0d9ba7b69bab</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}</DockerServiceUrl>
-    <DockerServiceName>restwithaspnetudemy</DockerServiceName>
+    <DockerServiceName>restfullmysqlwithaspnetcoreanddocker</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="docker-compose.override.yml">
-      <DependentUpon>docker-compose.yml</DependentUpon>
-    </None>
     <None Include="docker-compose.yml" />
     <None Include=".dockerignore" />
   </ItemGroup>

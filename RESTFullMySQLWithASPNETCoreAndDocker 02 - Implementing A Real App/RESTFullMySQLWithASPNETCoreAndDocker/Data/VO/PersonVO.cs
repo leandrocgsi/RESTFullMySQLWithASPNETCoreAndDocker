@@ -1,7 +1,7 @@
 ﻿using Tapioca.HATEOAS;
 using System.Collections.Generic;
 
-namespace RestWithASPNETUdemy.Data.VO
+namespace RESTFullMySQLWithASPNETCoreAndDocker.Data.VO
 {
     public class PersonVO : ISupportsHyperMedia
     {

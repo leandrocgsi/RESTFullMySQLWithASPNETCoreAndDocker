@@ -1,11 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RestWithASPNETUdemy.Model.Base;
-using RestWithASPNETUdemy.Model.Context;
+using RESTFullMySQLWithASPNETCoreAndDocker.Model.Base;
+using RESTFullMySQLWithASPNETCoreAndDocker.Model.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace RestWithASPNETUdemy.Repository.Generic
+namespace RESTFullMySQLWithASPNETCoreAndDocker.Repository.Generic
 {
     // A implementação do repositório genérico
     // Recebe qualquer Tipo T que implemente IRepository de mesmo tipo

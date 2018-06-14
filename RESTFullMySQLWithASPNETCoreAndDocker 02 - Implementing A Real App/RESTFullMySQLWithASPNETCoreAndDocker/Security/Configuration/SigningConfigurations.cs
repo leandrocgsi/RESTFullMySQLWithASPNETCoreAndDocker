@@ -1,7 +1,7 @@
 ﻿using Microsoft.IdentityModel.Tokens;
 using System.Security.Cryptography;
 
-namespace RestWithASPNETUdemy.Security.Configuration
+namespace RESTFullMySQLWithASPNETCoreAndDocker.Security.Configuration
 {
     public class SigningConfigurations
     {

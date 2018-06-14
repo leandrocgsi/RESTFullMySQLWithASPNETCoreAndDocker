@@ -1,6 +1,6 @@
-﻿using RestWithASPNETUdemy.Model;
+﻿using RESTFullMySQLWithASPNETCoreAndDocker.Model;
 
-namespace RestWithASPNETUdemy.Business
+namespace RESTFullMySQLWithASPNETCoreAndDocker.Business
 {
     public interface ILoginBusiness
     {

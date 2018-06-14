@@ -5,10 +5,10 @@ EXPOSE 80
 FROM microsoft/aspnetcore-build:2.0 AS build
 WORKDIR /src
 COPY *.sln ./
-COPY RestWithASPNETUdemy/RestWithASPNETUdemy.csproj RestWithASPNETUdemy/
+COPY RESTFullMySQLWithASPNETCoreAndDocker/RESTFullMySQLWithASPNETCoreAndDocker.csproj RESTFullMySQLWithASPNETCoreAndDocker/
 RUN dotnet restore
 COPY . .
-WORKDIR /src/RestWithASPNETUdemy
+WORKDIR /src/RESTFullMySQLWithASPNETCoreAndDocker
 RUN dotnet build -c Release -o /app
 
 FROM build AS publish
@@ -17,4 +17,4 @@ RUN dotnet publish -c Release -o /app
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "RestWithASPNETUdemy.dll"]
+ENTRYPOINT ["dotnet", "RESTFullMySQLWithASPNETCoreAndDocker.dll"]

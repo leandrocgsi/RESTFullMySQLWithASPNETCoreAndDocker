@@ -1,8 +1,8 @@
-﻿using RestWithASPNETUdemy.Model;
-using RestWithASPNETUdemy.Model.Base;
+﻿using RESTFullMySQLWithASPNETCoreAndDocker.Model;
+using RESTFullMySQLWithASPNETCoreAndDocker.Model.Base;
 using System.Collections.Generic;
 
-namespace RestWithASPNETUdemy.Repository.Generic
+namespace RESTFullMySQLWithASPNETCoreAndDocker.Repository.Generic
 {
     public interface IPersonRepository : IRepository<Person>
     {

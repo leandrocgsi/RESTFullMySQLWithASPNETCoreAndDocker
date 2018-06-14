@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace RestWithASPNETUdemy.Model.Context
+namespace RESTFullMySQLWithASPNETCoreAndDocker.Model.Context
 {
     public class MySQLContext : DbContext
     {

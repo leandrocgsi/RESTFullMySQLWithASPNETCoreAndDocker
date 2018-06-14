@@ -1,11 +1,11 @@
-﻿using RestWithASPNETUdemy.Model;
-using RestWithASPNETUdemy.Security.Configuration;
+﻿using RESTFullMySQLWithASPNETCoreAndDocker.Model;
+using RESTFullMySQLWithASPNETCoreAndDocker.Security.Configuration;
 using System;
 using System.Security.Claims;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Principal;
 
-namespace RestWithASPNETUdemy.Business.Implementattions
+namespace RESTFullMySQLWithASPNETCoreAndDocker.Business.Implementattions
 {
     public class LoginBusinessImpl : ILoginBusiness
     {

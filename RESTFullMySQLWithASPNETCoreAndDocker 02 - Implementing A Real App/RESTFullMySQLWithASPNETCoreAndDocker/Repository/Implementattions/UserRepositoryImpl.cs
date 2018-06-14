@@ -1,8 +1,8 @@
-﻿using RestWithASPNETUdemy.Model;
-using RestWithASPNETUdemy.Model.Context;
+﻿using RESTFullMySQLWithASPNETCoreAndDocker.Model;
+using RESTFullMySQLWithASPNETCoreAndDocker.Model.Context;
 using System.Linq;
 
-namespace RestWithASPNETUdemy.Business.Implementattions
+namespace RESTFullMySQLWithASPNETCoreAndDocker.Business.Implementattions
 {
     public class UserRepositoryImpl : IUserRepository
     {

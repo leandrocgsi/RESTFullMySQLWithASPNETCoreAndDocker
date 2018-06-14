@@ -1,7 +1,7 @@
-﻿using RestWithASPNETUdemy.Model;
+﻿using RESTFullMySQLWithASPNETCoreAndDocker.Model;
 using System.Collections.Generic;
 
-namespace RestWithASPNETUdemy.Business
+namespace RESTFullMySQLWithASPNETCoreAndDocker.Business
 {
     public interface IUserRepository
     {

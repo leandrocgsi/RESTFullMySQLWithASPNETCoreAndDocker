@@ -1,7 +1,7 @@
-﻿using RestWithASPNETUdemy.Model;
+﻿using RESTFullMySQLWithASPNETCoreAndDocker.Model;
 using System.IO;
 
-namespace RestWithASPNETUdemy.Business.Implementattions
+namespace RESTFullMySQLWithASPNETCoreAndDocker.Business.Implementattions
 {
     public class FileBusinessImpl : IFileBusiness
     {

@@ -1,7 +1,7 @@
-﻿using RestWithASPNETUdemy.Model.Base;
+﻿using RESTFullMySQLWithASPNETCoreAndDocker.Model.Base;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace RestWithASPNETUdemy.Model
+namespace RESTFullMySQLWithASPNETCoreAndDocker.Model
 {
     [Table("persons")]
     public class Person : BaseEntity
