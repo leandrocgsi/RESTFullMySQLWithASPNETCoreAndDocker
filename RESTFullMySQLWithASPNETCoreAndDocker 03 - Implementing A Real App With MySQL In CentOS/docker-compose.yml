@@ -1,0 +1,38 @@
+version: '3.4'
+
+services:
+  db:
+    image: erudio-mysql
+    container_name: mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - erudio-network
+    build:
+      context: .
+      dockerfile: Dockerfile    
+    networks:
+      - erudio-network
+
+  restfullmysqlwithaspnetcoreanddocker:
+    image: restfullmysqlwithaspnetcoreanddocker-api
+    build:
+      context: .
+      dockerfile: RESTFullMySQLWithASPNETCoreAndDocker/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      HOST: db
+      DB_USER: root
+      DB_PWD: user
+    ports:
+      - "80"
+    links:
+      - db
+    depends_on:
+      - db
+    networks:
+      - erudio-network
+
+networks: 
+    erudio-network:
+        driver: bridge
