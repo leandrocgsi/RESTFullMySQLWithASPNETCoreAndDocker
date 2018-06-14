@@ -3,7 +3,10 @@ version: '3.4'
 services:
   db:
     image: erudio-mysql
-    entrypoint: ['/init_database.sh', '--default-authentication-plugin=mysql_native_password']
+    command: >
+      mysqld --default-authentication-plugin=mysql_native_password;
+      && mysql -h 127.0.0.1 -u root rest_with_asp_net_udemy
+      && init_database.sh
     restart: always
     volumes:
       - "./RESTFullMySQLWithASPNETCoreAndDocker/ci/init_database.sh:/usr/local/bin/init_database.sh"
