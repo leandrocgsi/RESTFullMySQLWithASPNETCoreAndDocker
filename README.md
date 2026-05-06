@@ -1,5 +1,16 @@
+# [RESTFullMySQLWithASPNETCoreAndDocker](https://github.com/leandrocgsi/RESTFullMySQLWithASPNETCoreAndDocker)
+## RESTFull MySQL With ASP.NET Core And Docker
+
+Juntando trechos de código soltos pela internet para aprender ASP.NET sozinho? Esse caminho costuma custar caro:
+
+- **Horas perdidas** tentando encaixar exemplos que nunca funcionam juntos
+- **Erros difíceis de depurar** por falta de contexto e fundamentos sólidos
+- **Sem clareza** sobre boas práticas, arquitetura e deploy em produção
+
+Conheça a [Formação ASP.NET 2026](https://pub.erudio.com.br/asp-net-2026-do-0-a-azure-e-gcp-com-asp-net-10-docker-e-kubernetes?utm_source=github&utm_medium=organic&utm_campaign=readme&utm_content=repo) e construa APIs profissionais do zero ao deploy na nuvem, com estrutura, didática e foco no mercado.
+
 # [Formação ASP.NET 2026: do Zero ao Deploy na Azure e GCP com .NET 10, Docker e Kubernetes](https://pub.erudio.com.br/asp-net-2026-do-0-a-azure-e-gcp-com-asp-net-10-docker-e-kubernetes?utm_source=github&utm_medium=organic&utm_campaign=readme&utm_content=repo)
-### [do Zero ao Deploy na Azure e GCP com .NET 10, Docker e Kubernetes](https://pub.erudio.com.br/asp-net-2026-do-0-a-azure-e-gcp-com-asp-net-10-docker-e-kubernetes?utm_source=github&utm_medium=organic&utm_campaign=readme&utm_content=repo)
+### [Domine REST APIs com ASP.NET, .NET 10, Docker e Kubernetes do Zero ao Deploy na Azure e GCP](https://pub.erudio.com.br/asp-net-2026-do-0-a-azure-e-gcp-com-asp-net-10-docker-e-kubernetes?utm_source=github&utm_medium=organic&utm_campaign=readme&utm_content=repo)
 
 [![Image](https://raw.githubusercontent.com/leandrocgsi/blog-images/refs/heads/main/formacoes_github/01-rest-asp-net.png "Formação ASP.NET 2026: do Zero ao Deploy na Azure e GCP com .NET 10, Docker e Kubernetes")](https://pub.erudio.com.br/asp-net-2026-do-0-a-azure-e-gcp-com-asp-net-10-docker-e-kubernetes?utm_source=github&utm_medium=organic&utm_campaign=readme&utm_content=repo)
 
